@@ -1,7 +1,7 @@
 ---
 layout: page
 title: cuPF
-description: Batched GPU power flow — up to 27.94× faster than ExaPF
+description: Batched AC power flow on the GPU
 permalink: /projects/cupf/
 importance: 2
 category: software for the hardware

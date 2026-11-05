@@ -11,6 +11,7 @@ profile:
   more_info: >
     <p><i class="fa-solid fa-envelope"></i> <a href="mailto:robert032626@gmail.com">robert032626@gmail.com</a></p>
     <p><i class="fa-brands fa-github"></i> <a href="https://github.com/seungwooLee00">seungwooLee00</a></p>
+    <p><i class="fa-solid fa-file-lines"></i> <a href="/assets/pdf/cv.pdf">CV (PDF)</a></p>
     <p><i class="fa-solid fa-location-dot"></i> Seoul, South Korea</p>
 
 selected_papers: false
@@ -42,8 +43,8 @@ My research is **software–hardware co-design**. A program runs fast only when 
 ## GPU and NPU kernels
 
 - **[Accelerating Sparse LU on GPUs](/projects/sparse-lu/)** (M.S. thesis, ongoing) — packs the many small dense blocks of sparse factorization into GPU warps and picks the kernel to match.
-- **[cuPF](/projects/cupf/)** — batched power flow with the whole Newton–Raphson loop on the GPU; up to **27.94×** faster than ExaPF.
-- **[Gemma-4 kernels on FuriosaAI RNGD](/projects/furiosa/)** — batch-1 decoder kernels restructured around weight streaming on an NPU; **8.05×** kernel speedup.
+- **[cuPF](/projects/cupf/)** — batched AC power flow with the whole Newton–Raphson loop on the GPU.
+- **[Gemma-4 kernels on FuriosaAI RNGD](/projects/furiosa/)** — batch-1 decoder kernels restructured around weight streaming on an NPU.
 
 ## Models for constrained devices
 

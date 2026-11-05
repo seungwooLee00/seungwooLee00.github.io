@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FPGA accelerators on Zynq UltraScale+
-description: INT8 dot-product and GEMV accelerators — about 17× faster than the ARM core
+description: INT8 dot-product and GEMV accelerators driven by the ARM cores
 permalink: /projects/zynq/
 importance: 1
 category: hardware for the workload
