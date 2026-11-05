@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper on [early-exit neural architecture search for microcontrollers](/projects/eenas/) received the Best Paper Award at KCC 2025.
+Best Paper Award at KCC 2025 for [early-exit NAS for microcontrollers](/projects/eenas/).

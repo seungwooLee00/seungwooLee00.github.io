@@ -2,11 +2,11 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research, competitions, and systems projects. Each card links to a short write-up with results.
+description: Research, competitions, teaching, and coursework.
 nav: true
 nav_order: 3
-display_categories: [research, competitions, systems]
-horizontal: false
+display_categories: [research, competitions, teaching, coursework]
+horizontal: true
 ---
 
 <!-- pages/projects.md -->

@@ -1,15 +1,12 @@
 ---
 layout: page
 title: Early-exit NAS for microcontrollers
-description: Searching tiny CNNs that can stop early, under a 1 MB SRAM / 2 MB flash budget
+description: 16.5% lower latency than MCUNet on an STM32H7 — KCC 2025 Best Paper Award
 permalink: /projects/eenas/
-importance: 2
+importance: 3
 category: research
-related_publications: false
 ---
 
-Microcontrollers have about 1 MB of SRAM and 2 MB of flash. An early-exit network adds small classifiers partway through so that easy inputs stop early, but every exit costs memory. This work searches the backbone, the exit positions, and the exit thresholds together under that budget, using a weight-sharing supernet and a genetic algorithm guided by accuracy and exit predictors.
+An early-exit network lets easy inputs stop at an early classifier, but on a microcontroller with 2 MB of memory every extra exit has to fit. This work searches the backbone, the exit positions, and the exit thresholds together, using an accuracy predictor and a latency lookup table.
 
-On CIFAR-100, 59.7% of inputs exit early and average computation drops by 39% (281M → 171M FLOPs) for a 0.44-point accuracy loss. The paper received the **Best Paper Award at KCC 2025**.
-
-The code belongs to the lab and will be released by the lab.
+**Result:** on an STM32H7, 16.5% lower latency than MCUNet (1.036 → 0.865 s) at 0.94 points lower accuracy. **Best Paper Award, KCC 2025.**

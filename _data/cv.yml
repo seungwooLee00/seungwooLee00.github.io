@@ -43,7 +43,7 @@ cv:
         highlights:
           - "GPU sparse LU for power-grid matrices: 11.98× faster factorization and solve than NVIDIA cuDSS (master's thesis)"
           - "cuPF, batched GPU power flow: up to 27.94× faster than ExaPF and 10.67× faster than GPU-Sim2Grid"
-          - "Early-exit neural architecture search for microcontrollers (KCC 2025 Best Paper Award)"
+          - "Early-exit NAS for microcontrollers: 16.5% lower latency than MCUNet (KCC 2025 Best Paper Award)"
 
       - company: Sogang University
         position: Teaching Assistant, Basic SoC Design
