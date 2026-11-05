@@ -4,7 +4,7 @@ title: FPGA accelerators on Zynq UltraScale+
 description: INT8 dot-product and GEMV accelerators — about 17× faster than the ARM core
 permalink: /projects/zynq/
 importance: 1
-category: teaching
+category: hardware for the workload
 ---
 
 As teaching assistant for Basic SoC Design (fall 2025), I built the course's FPGA lab series on the Ultra96-V2, ending in INT8 accelerators.

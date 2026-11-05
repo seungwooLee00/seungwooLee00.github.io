@@ -5,7 +5,7 @@ description: Android app → JNI → custom system call and device driver
 permalink: /projects/embedded-aes/
 github: https://github.com/seungwooLee00/embedded-system-software-final-project
 importance: 1
-category: coursework
+category: other projects
 ---
 
 Individual final project for Embedded System Software (2024) on an Achro-i.MX6 board: an Android app that encrypts text with AES-128, using the board's switches and displays.

@@ -1,12 +1,12 @@
 cv:
   name: Seungwoo Lee
-  label: M.S. student, Computer Science and Engineering, Sogang University
+  label: M.S. student, Sogang University — Software–Hardware Co-design
   email: robert032626@gmail.com
   location: Seoul, South Korea
   image: ""
   summary: >-
-    Software–hardware co-design: finding where a workload loses time on a given piece of hardware, then reshaping
-    the algorithm, data layout, and kernels to fit it. Current focus is sparse LU factorization on GPUs.
+    Software–hardware co-design: I find where a workload and its hardware fit poorly, then change the software,
+    the hardware, or the model so they fit. Work spans GPUs, NPUs, FPGAs, and microcontrollers.
 
   social_networks:
     - network: GitHub
@@ -20,10 +20,10 @@ cv:
         area: Computer Science and Engineering
         studyType: M.S.
         start_date: 2025-03
-        end_date: 2027-02
+        end_date: present
         highlights:
           - "High-Performance AI Systems Lab, advised by Prof. Youngmin Yi"
-          - "Thesis topic: accelerating sparse LU factorization on GPUs (expected Feb. 2027)"
+          - "Thesis: accelerating sparse LU factorization on GPUs (expected Feb. 2027)"
 
       - institution: Sogang University
         location: Seoul, South Korea

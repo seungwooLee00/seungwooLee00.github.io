@@ -4,8 +4,8 @@ title: Gemma-4 kernels on FuriosaAI RNGD
 description: NPU kernel competition — 8.05× faster Gemma-4 decoder kernels
 permalink: /projects/furiosa/
 github: https://github.com/seungwooLee00/FuriosaAI_Competition
-importance: 1
-category: competitions
+importance: 3
+category: software for the hardware
 ---
 
 At batch size 1, every Gemma-4 decoder layer is a matrix–vector product: each weight is read once and used once, so speed depends on data movement, not arithmetic.

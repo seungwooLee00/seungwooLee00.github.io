@@ -4,8 +4,8 @@ title: Malicious URL and JavaScript detection
 description: Hackathon winner — detection models quantized for a CPU server
 permalink: /projects/kisia/
 github: https://github.com/seungwooLee00/malicious-url-detection
-importance: 2
-category: competitions
+importance: 3
+category: models for the device
 ---
 
 A Chrome extension and backend that warn users before a malicious site opens. Team of four; I led the team and built the models. **Top Excellence Award (Minister of Science and ICT Award)**, KISIA hackathon 2024.

@@ -4,7 +4,7 @@ title: Accelerating Sparse LU on GPUs
 description: Ongoing master's thesis — sparse LU for matrices made of many small dense blocks
 permalink: /projects/sparse-lu/
 importance: 1
-category: research
+category: software for the hardware
 ---
 
 Ongoing (master's thesis). Many sparse matrices factor into a large number of small dense blocks. Each block is too small to keep a GPU busy, and the number of blocks that can run in parallel changes as the factorization proceeds.

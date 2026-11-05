@@ -9,11 +9,11 @@ last_name: Lee
 contact_note: >
   Email is the best way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Seungwoo Lee, M.S. student at Sogang University working on software–hardware co-design: GPU kernels, sparse linear solvers, and efficient neural networks on constrained hardware.
+  Seungwoo Lee, M.S. student at Sogang University. Research: software–hardware co-design across GPUs, NPUs, FPGAs, and microcontrollers.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-keywords: Seungwoo Lee, GPU, CUDA, sparse linear solver, power flow, hardware-software co-design, FPGA, NPU
+keywords: Seungwoo Lee, software-hardware co-design, GPU, CUDA, NPU, FPGA, microcontroller, sparse LU
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🧮 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.

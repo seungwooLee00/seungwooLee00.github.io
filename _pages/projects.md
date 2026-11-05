@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: Research, competitions, teaching, and coursework.
+description: Grouped by which side of the software–hardware boundary each project changes.
 nav: true
-nav_order: 3
-display_categories: [research, competitions, teaching, coursework]
+nav_order: 2
+display_categories: [software for the hardware, hardware for the workload, models for the device, other projects]
 horizontal: true
 ---
 

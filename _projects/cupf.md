@@ -4,7 +4,7 @@ title: cuPF
 description: Batched GPU power flow — up to 27.94× faster than ExaPF
 permalink: /projects/cupf/
 importance: 2
-category: research
+category: software for the hardware
 ---
 
 Power-flow analysis is rerun for hundreds of load and generation scenarios on the same grid. cuPF runs the whole Newton–Raphson loop for all of them on the GPU at once.

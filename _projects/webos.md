@@ -5,7 +5,7 @@ description: Team project (2024) — TV front end and test process
 permalink: /projects/webos/
 github: https://github.com/KangNaewon/connected-platform
 importance: 4
-category: coursework
+category: other projects
 ---
 
 Connected Platform Theory and Practice (fall 2024): a webOS TV app that recommends restaurants and plays their videos, with a backend and a data scraper.
