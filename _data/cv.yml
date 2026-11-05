@@ -6,7 +6,7 @@ cv:
   image: ""
   summary: >-
     Software–hardware co-design: finding where a workload loses time on a given piece of hardware, then reshaping
-    the algorithm, data layout, and kernels to fit it. Current focus is GPU sparse linear solvers for power-system analysis.
+    the algorithm, data layout, and kernels to fit it. Current focus is sparse LU factorization on GPUs.
 
   social_networks:
     - network: GitHub
@@ -23,7 +23,7 @@ cv:
         end_date: 2027-02
         highlights:
           - "High-Performance AI Systems Lab, advised by Prof. Youngmin Yi"
-          - "Thesis topic: GPU sparse linear solvers for power-system Jacobians (expected Feb. 2027)"
+          - "Thesis topic: accelerating sparse LU factorization on GPUs (expected Feb. 2027)"
 
       - institution: Sogang University
         location: Seoul, South Korea
@@ -41,7 +41,7 @@ cv:
         start_date: 2025-01
         end_date: present
         highlights:
-          - "GPU sparse LU for power-grid matrices: 11.98× faster factorization and solve than NVIDIA cuDSS (master's thesis)"
+          - "Accelerating sparse LU on GPUs (master's thesis, ongoing)"
           - "cuPF, batched GPU power flow: up to 27.94× faster than ExaPF and 10.67× faster than GPU-Sim2Grid"
           - "Early-exit NAS for microcontrollers: 16.5% lower latency than MCUNet (KCC 2025 Best Paper Award)"
 

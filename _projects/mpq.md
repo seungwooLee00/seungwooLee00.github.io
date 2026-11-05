@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mixed-precision quantization search
+title: Quantization study
 description: Ongoing — per-layer bit widths chosen with latency measured on hardware
 permalink: /projects/mpq/
 importance: 4

@@ -25,7 +25,7 @@ latest_posts:
 
 I work on **software–hardware co-design**: finding where a workload and its hardware fit poorly, then redesigning the algorithm, the data layout, or the hardware to close the gap. Advisor: Prof. Youngmin Yi.
 
-- **GPU:** sparse LU for power-grid matrices, **11.98×** faster than NVIDIA cuDSS ([thesis](/projects/sparse-lu/)); power-flow solver up to **27.94×** faster than ExaPF ([cuPF](/projects/cupf/)).
+- **GPU:** power-flow solver up to **27.94×** faster than ExaPF ([cuPF](/projects/cupf/)); sparse LU on GPUs, generalized from cuPF (ongoing [thesis](/projects/sparse-lu/)).
 - **NPU:** Gemma-4 decoder kernels on the FuriosaAI RNGD, **8.05×** faster than the baseline ([project](/projects/furiosa/)).
 - **FPGA:** INT8 dot-product and GEMV accelerators on a Zynq UltraScale+, about **17×** faster than the ARM core ([project](/projects/zynq/)).
 - **MCU:** early-exit networks with **16.5%** lower latency than MCUNet, KCC 2025 Best Paper Award ([project](/projects/eenas/)).
