@@ -23,7 +23,7 @@ latest_posts:
   enabled: false
 ---
 
-I am an M.S. student at Sogang University, advised by Prof. Youngmin Yi. I work on **software–hardware co-design**: finding where a workload and its hardware fit poorly, then redesigning the algorithm, the data layout, or the hardware to close the gap.
+I work on **software–hardware co-design**: finding where a workload and its hardware fit poorly, then redesigning the algorithm, the data layout, or the hardware to close the gap. Advisor: Prof. Youngmin Yi.
 
 - **GPU:** sparse LU for power-grid matrices, **11.98×** faster than NVIDIA cuDSS ([thesis](/projects/sparse-lu/)); power-flow solver up to **27.94×** faster than ExaPF ([cuPF](/projects/cupf/)).
 - **NPU:** Gemma-4 decoder kernels on the FuriosaAI RNGD, **8.05×** faster than the baseline ([project](/projects/furiosa/)).

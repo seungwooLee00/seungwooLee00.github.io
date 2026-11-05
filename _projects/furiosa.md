@@ -3,7 +3,6 @@ layout: page
 title: Gemma-4 kernels on FuriosaAI RNGD
 description: NPU kernel competition — 8.05× faster Gemma-4 decoder kernels
 permalink: /projects/furiosa/
-img: assets/img/projects/furiosa_kernel_speedup.png
 github: https://github.com/seungwooLee00/FuriosaAI_Competition
 importance: 1
 category: competitions
