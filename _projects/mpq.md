@@ -1,14 +1,16 @@
 ---
 layout: page
 title: Quantization study
-description: Ongoing — INT8 vision models on an STM32 microcontroller and an RTX 3090
+description: Ongoing — running an early-exit model in INT8 on an STM32 without losing its speed or accuracy
 permalink: /projects/mpq/
 importance: 2
 category: models for the device
 ---
 
-Ongoing. When a vision model moves from FP32 training to INT8 deployment, which changes keep accuracy, and which save time or memory on the target hardware?
+Ongoing. The study started from deploying the [early-exit NAS](/projects/eenas/) model on an STM32. The fastest candidate (865 ms expected latency) dropped to 75.51% top-1 after INT8 conversion, and the goal was to bring it to 75.8% while keeping that latency. The best calibration that kept all four exits reached 75.71%. Cross-layer equalization did not help: every such run exported a single output, which removes early exit.
 
-- **Accuracy depends on the target:** MCUNet-in1 reached 49.79% top-1 on ImageNet with TensorFlow Lite on a CPU, but 45.93% with TinyEngine on the STM32 on the same 50,000 images. Among early-exit NAS candidates, the most accurate model in FP32 was not the most accurate after INT8 conversion.
-- **Attention on a microcontroller:** for MobileViT-XXS on an STM32H7, an integer Softmax approximation and row-by-row attention made the attention kernels 1.41× faster and cut working memory by 34.6%. These runs used model-shaped kernels with synthetic inputs; measuring accuracy on the board is the next step.
+From there the study asks which changes from FP32 training to INT8 deployment keep accuracy, and which save time or memory on the target:
+
+- **Accuracy has to be measured on the target:** among the early-exit candidates, the most accurate model in FP32 was not the most accurate in INT8. MCUNet-in1 reached 49.79% top-1 on ImageNet with TensorFlow Lite on a CPU but 45.93% with TinyEngine on the STM32, on the same 50,000 images.
+- **Attention on a microcontroller:** for MobileViT-XXS on an STM32H7, an integer Softmax approximation and row-by-row attention made the attention kernels 1.41× faster and cut working memory by 34.6%. These runs used model-shaped kernels with synthetic inputs; measuring accuracy and end-to-end latency on the board is the next step.
 - **INT8 on a GPU:** for ViT-B/16 on an RTX 3090, enabling INT8 in TensorRT barely changed runtime, while INT8 linear layers with fused conversions cut time from 79.0 to 52.5 ms against their own FP16 baseline.

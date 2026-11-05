@@ -33,7 +33,7 @@ My research is **software–hardware co-design**. A program runs fast only when 
 ## Models for constrained devices
 
 - **[Early-exit NAS for microcontrollers](/projects/eenas/)** — searches the network and its early exits under a 2 MB memory limit; **16.5%** lower latency than MCUNet on an STM32H7. KCC 2025 Best Paper Award.
-- **[Quantization study](/projects/mpq/)** (ongoing) — INT8 vision models on an STM32 and an RTX 3090; integer Softmax and row-by-row attention made MobileViT-XXS attention **1.41×** faster with **35%** less working memory on the STM32.
+- **[Quantization study](/projects/mpq/)** (ongoing) — started from running the early-exit model in INT8 on an STM32 without losing its latency advantage; asks which FP32-to-INT8 changes keep accuracy and which save time or memory on the target.
 
 ## Teaching
 
