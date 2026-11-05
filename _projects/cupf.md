@@ -1,37 +1,34 @@
 ---
 layout: page
 title: cuPF
-description: GPU power-flow computation for many grid scenarios at once
+description: Batched GPU power flow with a sparse LU solver built for power-grid matrices
 permalink: /projects/cupf/
 importance: 1
 category: research
 related_publications: false
 ---
 
-Power-flow analysis solves for the voltage at every bus of a power grid, and operators rerun it for many generation and load scenarios on the same grid. cuPF moves the whole Newton–Raphson loop to the GPU and runs many scenarios as one batch. On a grid with about 70,000 buses it is up to **101.5× faster** than a CPU C++ implementation of the MATPOWER algorithm (1,970.8 ms vs. 19.4 ms at batch size 256).
+Power-flow analysis is rerun for hundreds of load and generation scenarios on the same grid. cuPF solves them as one batch, with the whole Newton–Raphson loop on the GPU. Most of the work is the sparse linear solve inside each iteration.
 
-## Where the time goes
+## Where the hardware and the workload disagree
 
-Each Newton–Raphson iteration computes a mismatch vector, builds a sparse Jacobian matrix, solves a linear system with it, and updates the voltages. On a 13,659-bus grid, Jacobian construction and the linear solve take about 95% of the runtime, so cuPF targets those two steps. The grid does not change between iterations or scenarios, so the sparsity pattern and memory layout are fixed once and reused.
+Power-grid Jacobians factor into many small dense blocks arranged in an elimination tree. Each block is too small to keep a GPU busy, and the number of independent blocks changes from one tree level to the next. Profiling NVIDIA cuDSS with Nsight Compute showed it limited by memory latency and instruction issue on these matrices, not by arithmetic.
 
-## Building the Jacobian edge by edge
+## What I changed
 
-Building the Jacobian bus by bus gives each GPU thread as much work as its bus has connections, and bus degrees vary widely. Threads in the same warp then wait for the busiest one. cuPF assigns work per grid edge instead, so every thread does the same amount of work.
+- **Warp packing:** several small matrices share one warp, cutting instruction and synchronization overhead per matrix.
+- **Gather instead of scatter:** each parent block collects its children's updates, removing repeated read-modify-write traffic to global memory.
+- **Per-level kernel choice:** the kernel and sub-warp size are picked from matrix size, the number of independent blocks, and GPU resources, trading packing efficiency against latency hiding.
+- **Around the solver:** symbolic analysis is reused across scenarios, the Jacobian is built per grid edge so every thread gets equal work, and the Jacobian and solve run in FP32 while the voltage state and residual stay in FP64 (converging to 10⁻⁸).
 
-| Grid size (buses) | Speedup over bus-based kernel | Lane utilization, edge-based | Lane utilization, bus-based |
-| --- | ---: | ---: | ---: |
-| ≤ 100 | 1.61× | 74.7% | 53.3% |
-| ≤ 1K | 2.16× | 95.6% | 46.7% |
-| ≤ 10K | 2.49× | 96.5% | 38.7% |
-| ≤ 50K | 1.73× | 96.6% | 37.5% |
-| > 50K | 1.66× | 98.3% | 43.9% |
+## Results
 
-Averaged over the 78 MATPOWER test grids, grouped by size.
+RTX 3090, 8 power grids, geometric mean.
 
-## Mixed precision
+| Comparison | Speedup |
+| --- | ---: |
+| Sparse LU factorization + solve vs. NVIDIA cuDSS (batch 256) | **11.98×** |
+| Full Newton–Raphson vs. ExaPF | up to **27.94×** |
+| Full Newton–Raphson vs. GPU-Sim2Grid | up to **10.67×** |
 
-Running everything in single precision is fast but stops converging: the mismatch stalls around 10⁻². cuPF computes the Jacobian and the linear solve in single precision, and keeps the voltage state, mismatch, and convergence check in double precision. This converges like full double precision while adding only 4–7% time over full single precision, compared with 19–64% for full double precision.
-
-## Ongoing work
-
-The linear solve is now the main cost. For my master's thesis I am designing GPU sparse LU factorization for the many small dense blocks that power-system Jacobians produce (manuscript in preparation). The code will be released by the lab.
+Master's thesis work; manuscript in preparation. The code will be released by the lab.

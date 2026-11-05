@@ -41,8 +41,8 @@ cv:
         start_date: 2025-01
         end_date: present
         highlights:
-          - "cuPF: GPU power-flow computation with edge-based Jacobian assembly and mixed precision (KCC 2026)"
-          - "GPU sparse LU factorization for power-system Jacobians (manuscript in preparation)"
+          - "GPU sparse LU for power-grid matrices: 11.98× faster factorization and solve than NVIDIA cuDSS (master's thesis)"
+          - "cuPF, batched GPU power flow: up to 27.94× faster than ExaPF and 10.67× faster than GPU-Sim2Grid"
           - "Early-exit neural architecture search for microcontrollers (KCC 2025 Best Paper Award)"
 
       - company: Sogang University
@@ -51,7 +51,7 @@ cv:
         start_date: 2025-09
         end_date: 2025-12
         highlights:
-          - "Built the FPGA lab series on the Ultra96-V2 (Zynq UltraScale+): from adders to AXI4-Lite peripherals, CDMA transfers, and a pipelined INT8 dot-product accelerator"
+          - "Built the FPGA lab series on the Ultra96-V2 (Zynq UltraScale+), ending in INT8 dot-product and GEMV accelerators driven by the ARM cores over AXI"
 
     Awards:
       - title: Best Paper Award

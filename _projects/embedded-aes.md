@@ -8,7 +8,7 @@ category: systems
 github: https://github.com/seungwooLee00/embedded-system-software-final-project
 ---
 
-An individual final project for Embedded System Software (2024) on an Achro-i.MX6 board. An Android app encrypts short text with AES-128 and stores it under a numeric key; the user types input on the board's push switches and reads results on its 7-segment display, dot matrix, and text LCD. The project runs through every layer of the stack.
+Individual final project for Embedded System Software (2024) on an Achro-i.MX6 board: an Android app that encrypts text with AES-128, taking input from the board's push switches and showing results on its displays. It runs through every layer from the app to the hardware.
 
 | Layer | What I wrote |
 | --- | --- |
@@ -17,4 +17,4 @@ An individual final project for Embedded System Software (2024) on an Achro-i.MX
 | System call (kernel) | AES-128 encryption and decryption written from scratch, exposed as system call 379 |
 | Device driver (kernel module) | A character device that maps the FPGA I/O devices with `ioremap` and exposes nine `ioctl` commands |
 
-Reading text from the switches blocks the caller: a kernel thread collects key presses, and the board's HOME button raises an interrupt that stops the thread and wakes the caller from a wait queue. Countdowns on the dot matrix use a kernel timer the same way.
+Switch input runs in a kernel thread; a hardware interrupt from the HOME button ends it and wakes the waiting caller.

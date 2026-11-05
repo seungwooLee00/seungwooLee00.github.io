@@ -6,7 +6,7 @@ subtitle: M.S. student, Computer Science and Engineering, <a href='https://www.s
 
 profile:
   align: right
-  image: # add a photo: put it in assets/img/ and write its file name here, e.g. prof_pic.jpg
+  image:
   image_circular: false
   more_info: >
     <p>Seoul, South Korea</p>
@@ -23,13 +23,12 @@ latest_posts:
   enabled: false
 ---
 
-I work on **software–hardware co-design**. I look for where a workload loses time on a specific piece of hardware, then reshape the algorithm, data layout, and kernels to fit that hardware. I am an M.S. student at Sogang University, advised by Prof. Youngmin Yi.
+I work on **software–hardware co-design**: finding where a workload and the hardware it runs on fit poorly, then changing the algorithm, the data layout, or the hardware itself until they fit. I am an M.S. student at Sogang University, advised by Prof. Youngmin Yi.
 
-My main project is **cuPF**, GPU power-flow computation for power-grid analysis. Each Newton–Raphson step builds a sparse Jacobian from the grid and solves a linear system with it, and both steps map poorly to a GPU as written. I rebuilt Jacobian assembly around grid edges so that every thread gets the same amount of work, and ran the heavy arithmetic in single precision while keeping convergence checks in double precision. For my master's thesis I am designing GPU sparse LU kernels for the many small dense blocks these Jacobians produce.
+My main project is **[cuPF](/projects/cupf/)**, a batched GPU power-flow solver. Power-grid matrices break into many small dense blocks that leave general GPU sparse solvers with little parallel work. My sparse LU kernels pack several blocks into one warp and choose the kernel per tree level, making factorization and solve **11.98× faster than NVIDIA cuDSS**. The full Newton–Raphson solver is up to **27.94× faster than ExaPF** and **10.67× faster than GPU-Sim2Grid**.
 
-The same approach runs through my other work:
+Other work:
 
-- **Microcontrollers:** early-exit neural networks searched under a 1 MB SRAM / 2 MB flash budget ([KCC 2025 Best Paper Award](/projects/eenas/)).
-- **NPUs:** Gemma-4 decoder kernels on the FuriosaAI RNGD, redesigned around weight streaming ([competition](/projects/furiosa/)).
-- **FPGAs:** INT8 accelerators on a Zynq UltraScale+ that I built for the lab course I taught ([lab series](/projects/zynq/)).
-- **Operating systems:** a Linux device driver and system call driven from an Android app ([course project](/projects/embedded-aes/)).
+- **NPU:** Gemma-4 decoder kernels on the FuriosaAI RNGD, restructured around weight streaming ([project](/projects/furiosa/)).
+- **FPGA:** INT8 dot-product and GEMV accelerators on a Zynq UltraScale+, driven by the ARM cores over AXI ([project](/projects/zynq/)).
+- **Microcontroller:** early-exit networks searched under a 1 MB SRAM / 2 MB flash budget, KCC 2025 Best Paper Award ([project](/projects/eenas/)).
