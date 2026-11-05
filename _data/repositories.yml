@@ -1,0 +1,10 @@
+github_users:
+  - seungwooLee00
+
+repo_description_lines_max: 2
+
+github_repos:
+  - seungwooLee00/FuriosaAI_Competition
+  - seungwooLee00/malicious-url-detection
+  - seungwooLee00/embedded-system-software-final-project
+  - seungwooLee00/rl_proj

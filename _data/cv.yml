@@ -1,0 +1,85 @@
+cv:
+  name: Seungwoo Lee
+  label: M.S. student, Computer Science and Engineering, Sogang University
+  email: robert032626@gmail.com
+  location: Seoul, South Korea
+  image: ""
+  summary: >-
+    Software–hardware co-design: finding where a workload loses time on a given piece of hardware, then reshaping
+    the algorithm, data layout, and kernels to fit it. Current focus is GPU sparse linear solvers for power-system analysis.
+
+  social_networks:
+    - network: GitHub
+      username: seungwooLee00
+
+  sections:
+    Education:
+      - institution: Sogang University
+        location: Seoul, South Korea
+        url: https://www.sogang.ac.kr/
+        area: Computer Science and Engineering
+        studyType: M.S.
+        start_date: 2025-03
+        end_date: 2027-02
+        highlights:
+          - "High-Performance AI Systems Lab, advised by Prof. Youngmin Yi"
+          - "Thesis topic: GPU sparse linear solvers for power-system Jacobians (expected Feb. 2027)"
+
+      - institution: Sogang University
+        location: Seoul, South Korea
+        url: https://www.sogang.ac.kr/
+        area: Computer Science and Engineering
+        studyType: B.S.
+        start_date: 2019-03
+        end_date: 2025-02
+
+    Experience:
+      - company: High-Performance AI Systems Lab, Sogang University
+        position: Graduate Researcher
+        location: Seoul, South Korea
+        url: https://aisys.sogang.ac.kr
+        start_date: 2025-01
+        end_date: present
+        highlights:
+          - "cuPF: GPU power-flow computation with edge-based Jacobian assembly and mixed precision (KCC 2026)"
+          - "GPU sparse LU factorization for power-system Jacobians (manuscript in preparation)"
+          - "Early-exit neural architecture search for microcontrollers (KCC 2025 Best Paper Award)"
+
+      - company: Sogang University
+        position: Teaching Assistant, Basic SoC Design
+        location: Seoul, South Korea
+        start_date: 2025-09
+        end_date: 2025-12
+        highlights:
+          - "Built the FPGA lab series on the Ultra96-V2 (Zynq UltraScale+): from adders to AXI4-Lite peripherals, CDMA transfers, and a pipelined INT8 dot-product accelerator"
+
+    Awards:
+      - title: Best Paper Award
+        date: 2025-07
+        awarder: Korea Computer Congress (KCC 2025), Korean Institute of Information Scientists and Engineers
+        url: https://computing.sogang.ac.kr/ko/community/news/detail/216
+        summary: For "Neural Architecture Search for Tiny Neural Networks with Early Exit"
+
+      - title: Top Excellence Award (Minister of Science and ICT Award)
+        date: 2024-08
+        awarder: 2nd KISIA Information Security Developer Hackathon
+        summary: Malicious URL detection service, team of four (team lead, AI models)
+
+    Skills:
+      - name: Programming
+        icon: fa-solid fa-code
+        keywords: "CUDA, C, C++, Python, Verilog, Rust"
+      - name: Profiling
+        icon: fa-solid fa-gauge-high
+        keywords: "Nsight Compute, Nsight Systems"
+      - name: ML frameworks
+        icon: fa-solid fa-brain
+        keywords: "PyTorch, TensorFlow, ONNX"
+      - name: Embedded and FPGA
+        icon: fa-solid fa-microchip
+        keywords: "Vivado, Vitis, STM32CubeIDE, Linux kernel modules"
+
+    Interests:
+      - name: Relevant coursework
+        icon: fa-solid fa-book
+        keywords: "Computer Architecture, Multicore Programming, Operating Systems, Embedded Computer Architecture, Embedded System Software, Compiler Construction, Programming Languages, Digital Circuits, Numerical Computing"
