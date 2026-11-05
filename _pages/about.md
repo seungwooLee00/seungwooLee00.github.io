@@ -5,13 +5,16 @@ permalink: /
 subtitle: M.S. student, Sogang University · <b>Software–Hardware Co-design</b>
 
 profile:
-  align: right
+  align: left
   image:
   image_circular: false
-  more_info:
+  more_info: >
+    <p><i class="fa-solid fa-envelope"></i> <a href="mailto:robert032626@gmail.com">robert032626@gmail.com</a></p>
+    <p><i class="fa-brands fa-github"></i> <a href="https://github.com/seungwooLee00">seungwooLee00</a></p>
+    <p><i class="fa-solid fa-location-dot"></i> Seoul, South Korea</p>
 
 selected_papers: false
-social: true
+social: false
 
 announcements:
   enabled: false
@@ -32,7 +35,7 @@ My research is **software–hardware co-design**. A program runs fast only when 
 
 ## Models for constrained devices
 
-- **[Early-exit NAS for microcontrollers](/projects/eenas/)** — searches the network and its early exits under a 2 MB memory limit; **16.5%** lower latency than MCUNet on an STM32H7. KCC 2025 Best Paper Award.
+- **[Early-exit NAS for microcontrollers](/projects/eenas/)** — searches the network and its early exits together under the memory limits of an STM32H7. KCC 2025 Best Paper Award.
 - **[Quantization study](/projects/mpq/)** (ongoing) — started from running the early-exit model in INT8 on an STM32 without losing its latency advantage; asks which FP32-to-INT8 changes keep accuracy and which save time or memory on the target.
 
 ## Teaching

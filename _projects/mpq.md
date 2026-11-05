@@ -7,7 +7,7 @@ importance: 2
 category: models for the device
 ---
 
-Ongoing. The study started from deploying the [early-exit NAS](/projects/eenas/) model on an STM32. The fastest candidate (865 ms expected latency) dropped to 75.51% top-1 after INT8 conversion, and the goal was to bring it to 75.8% while keeping that latency. The best calibration that kept all four exits reached 75.71%. Cross-layer equalization did not help: every such run exported a single output, which removes early exit.
+Ongoing. The study started from deploying the [early-exit NAS](/projects/eenas/) model on an STM32: its fastest candidate lost accuracy after INT8 conversion, and the goal was to recover that accuracy while keeping its latency. Calibration choices alone fell short, and cross-layer equalization merged the exits into a single output, which removes early exit.
 
 From there the study asks which changes from FP32 training to INT8 deployment keep accuracy, and which save time or memory on the target:
 
