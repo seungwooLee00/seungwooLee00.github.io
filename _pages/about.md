@@ -23,6 +23,18 @@ latest_posts:
   enabled: false
 ---
 
+<style>
+  .post article > .profile { float: none !important; width: 100% !important; margin: 0 0 1.25rem 0 !important; }
+  .post article > .profile .more-info { font-family: inherit; font-size: 0.95rem; text-align: left; }
+  .post article > .profile .more-info p { display: block; margin: 0 0 0.35rem 0; }
+  .post article > .profile .more-info i { width: 1.2em; color: var(--global-text-color-light); }
+  @media (min-width: 768px) {
+    .post article { display: grid; grid-template-columns: 210px minmax(0, 1fr); column-gap: 2.5rem; align-items: start; }
+    .post article > .profile { position: sticky; top: 5rem; margin: 0.25rem 0 0 0 !important; }
+    .post article > .clearfix { grid-column: 2; }
+  }
+</style>
+
 I am an M.S. student in Computer Science and Engineering at Sogang University, advised by Prof. Youngmin Yi in the [High-Performance AI Systems Lab](https://aisys.sogang.ac.kr).
 
 My research is **software–hardware co-design**. A program runs fast only when its computation and data movement match what the hardware does well. I start from how a workload actually runs on a specific chip — where it waits on memory, leaves compute units idle, or runs out of on-chip storage — and reshape the kernels, the data layout, or the model to fit.
