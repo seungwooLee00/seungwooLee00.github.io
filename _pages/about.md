@@ -50,10 +50,15 @@ My research is **software–hardware co-design**. A program runs fast only when 
 ## Publications
 
 <div class="publications">
-{% bibliography --group_by none --query @*[selected=true]* %}
+{% bibliography --group_by none %}
 </div>
 
 ## Education
 
 - **M.S.**, Computer Science and Engineering, Sogang University — Mar 2025 – present
 - **B.S.**, Computer Science and Engineering, Sogang University — Mar 2019 – Feb 2025
+
+## Awards
+
+- Best Paper Award, Korea Computer Congress (KCC 2025) — Jul 2025
+- Top Excellence Award (Minister of Science and ICT Award), 2nd KISIA Information Security Developer Hackathon — Aug 2024
