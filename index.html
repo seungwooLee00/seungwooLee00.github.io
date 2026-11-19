@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="Seungwoo Lee" data-ko="이승우">Seungwoo Lee</title>
+  <meta name="description" content="Seungwoo Lee, M.S. student at Sogang University. Research: software–hardware co-design across GPUs, NPUs, FPGAs, and microcontrollers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js" defer></script>
+  <script src="spider.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+  <header class="site-head">
+    <div class="head-row">
+      <h1><span lang="en">Seungwoo Lee</span><span lang="ko">이승우</span></h1>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-set-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+    </div>
+    <p class="role">
+      <span lang="en">M.S. student, Sogang University.</span>
+      <span lang="ko">서강대학교 컴퓨터공학 석사과정.</span>
+    </p>
+  </header>
+
+  <div class="layout">
+
+    <aside class="side">
+      <img class="portrait" src="assets/img/profile.png" width="131" height="169" alt="">
+      <ul class="contact">
+        <li><a href="mailto:robert032626@gmail.com">robert032626@gmail.com</a></li>
+        <li><a href="https://github.com/seungwooLee00">GitHub</a></li>
+        <li><a href="assets/cv.pdf">CV (PDF)</a></li>
+        <li><span lang="en">Seoul, South Korea</span><span lang="ko">서울특별시</span></li>
+      </ul>
+    </aside>
+
+    <main>
+      <p lang="en">I am an M.S. student in Computer Science and Engineering at Sogang University, advised by Prof. Youngmin Yi in the <a href="https://aisys.sogang.ac.kr">High-Performance AI Systems Lab</a>.</p>
+      <p lang="ko">서강대학교 컴퓨터공학 석사과정이며, 이영민 교수님의 <a href="https://aisys.sogang.ac.kr">고성능 인공지능 시스템 연구실</a>에서 연구하고 있습니다.</p>
+
+      <p lang="en"><strong>Software–hardware co-design</strong><br>
+         I optimize software for the characteristics and resource limits of the hardware to make systems faster.<br>
+         I analyze how workloads run on real hardware and find the main performance bottlenecks.<br>
+         Based on that, I apply <strong>kernel optimization, workload mapping, and memory optimization</strong>.</p>
+      <p lang="ko"><strong>Software–Hardware Co-Design</strong><br>
+         하드웨어 특성과 자원 제약에 맞춰 소프트웨어를 최적화해 시스템 성능을 높이는 연구를 합니다.<br>
+         실제 하드웨어에서 워크로드가 어떻게 실행되는지 분석하고 주요 성능 병목을 찾습니다.<br>
+         이를 바탕으로 <strong>Kernel Optimization, Workload Mapping, Memory Optimization</strong>을 적용합니다.</p>
+
+      <h2>GPU kernel optimization</h2>
+      <ul class="projects">
+        <li>
+          <a class="title" href="projects/sparse-lu.html"><span lang="en">Accelerating Sparse LU on GPUs</span><span lang="ko">Sparse LU의 GPU 가속</span></a>
+          <ul class="points" lang="en">
+            <li>Analyze the computational dependencies of sparse LU factorization and the bottlenecks of level-by-level execution</li>
+            <li>Apply persistent-kernel task scheduling</li>
+            <li>Optimize task granularity and GPU resource utilization</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>Sparse LU Factorization의 연산 의존성과 기존 Level-by-Level 실행의 성능 병목 분석</li>
+            <li>Persistent Kernel 기반 Task Scheduling 적용</li>
+            <li>Task Granularity와 GPU Resource Utilization 최적화</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/cupf.html">cuPF</a>
+          <ul class="points" lang="en">
+            <li>Analyze the structure of power-flow Jacobians and the GPU performance bottlenecks</li>
+            <li>Design a GPU multifrontal LU solver for power flow with <strong>workload mapping that accounts for task and data parallelism, warp-level parallelization, and memory-access optimization</strong></li>
+            <li>Accelerate batched AC power flow by running the entire Newton–Raphson process on the GPU</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>Power flow Jacobian의 구조와 GPU 성능 병목 분석</li>
+            <li><strong>Task–Data Parallelism을 고려한 Workload Mapping, Warp-Level Parallelization, Memory Access Optimization</strong>으로 전력조류용 GPU Multifrontal LU Solver 설계</li>
+            <li>Newton–Raphson 전체 과정을 GPU에서 수행해 Batched AC Power Flow 가속</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">On-device AI</span><span lang="ko">On-device AI</span></h2>
+      <ul class="projects">
+        <li>
+          <a class="title" href="projects/eenas.html"><span lang="en">Early-exit NAS for MCUs</span><span lang="ko">MCU용 early-exit NAS</span></a>
+          <ul class="points" lang="en">
+            <li>Studied hardware-aware NAS for on-device AI inference within the limited memory of MCUs</li>
+            <li><strong>Jointly optimized the backbone and the early-exit structure</strong></li>
+            <li>Improved the early classifiers with <strong>a supernet training strategy that reduces training interference between auxiliary classifiers</strong></li>
+            <li>Optimized the trade-off between accuracy and inference latency</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>MCU의 제한된 메모리에서 On-Device AI 추론을 위한 Hardware-Aware NAS 연구</li>
+            <li><strong>Backbone과 Early-Exit 구조 공동 최적화</strong></li>
+            <li><strong>보조 분류기 간 학습 간섭을 줄이는 Supernet Training 전략</strong>으로 초기 분류기 성능 개선</li>
+            <li>정확도와 추론 지연 사이의 Trade-off 최적화</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">FPGA and NPU</span><span lang="ko">FPGA·NPU</span></h2>
+      <ul class="projects">
+        <li>
+          <a class="title" href="projects/zynq.html"><span lang="en">Teaching assistant, Basic SoC Design</span><span lang="ko">기초 SoC 설계 조교</span></a>
+          <ul class="points" lang="en">
+            <li>Designed an FPGA lab curriculum on the Ultra96-V2</li>
+            <li>Built the labs step by step from an adder to <strong>INT8 dot-product and GEMM accelerator design</strong></li>
+            <li>Covered controlling the accelerators from the ARM cores over AXI interfaces</li>
+            <li>Extended the labs to a <strong>tiny-ViT accelerator implementation</strong></li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>Ultra96-V2 FPGA 실습 커리큘럼 설계</li>
+            <li>Adder 구현부터 <strong>INT8 Dot Product·GEMM Accelerator 설계</strong>까지 단계별 구성</li>
+            <li>AXI Interface를 통한 ARM Core의 가속기 제어 실습 구성</li>
+            <li><strong>tiny-ViT Accelerator 구현</strong>까지 확장</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/furiosa.html">NPU Model Optimization Competition</a><span class="status">2026</span>
+          <ul class="points" lang="en">
+            <li>Optimized batch-1 decoding kernels for Gemma-4 on the FuriosaAI RNGD NPU</li>
+            <li><strong>Restructured computation and data movement around weight streaming</strong></li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>FuriosaAI RNGD NPU에서 Gemma-4의 Batch-1 Decoding Kernel 최적화</li>
+            <li><strong>Weight Streaming 중심으로 연산과 Data Movement 재구성</strong></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">Other projects</span><span lang="ko">그 밖의 프로젝트</span></h2>
+      <ul class="projects minor">
+        <li>
+          <a class="title" href="projects/embedded-aes.html"><span lang="en">Embedded System Software</span><span lang="ko">임베디드 시스템 소프트웨어</span></a>
+          <ul class="points" lang="en">
+            <li>Android app, JNI, a custom Linux system call, and a device driver on an i.MX6 board</li>
+            <li>Course project</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>i.MX6 board에서 Android app, JNI, Linux system call 추가, device driver 구현</li>
+            <li>수업 프로젝트</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/kisia.html"><span lang="en">Malicious URL and JavaScript detection</span><span lang="ko">악성 URL·JavaScript 탐지</span></a>
+          <ul class="points" lang="en">
+            <li>Team lead; built the AI models</li>
+            <li>Quantized the models to INT8 for a CPU server</li>
+            <li>Minister of Science and ICT Award</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>팀장, AI model 담당</li>
+            <li>CPU server용 model INT8 양자화</li>
+            <li>과학기술정보통신부 장관상</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/webos.html">Michelin in TV</a>
+          <ul class="points" lang="en">
+            <li>Frontend and testing for a webOS TV app</li>
+            <li>Team project</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>webOS TV app의 Frontend와 test 담당</li>
+            <li>팀 프로젝트</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/rl-nas.html"><span lang="en">Reinforcement learning vs. genetic search for MCU NAS</span><span lang="ko">MCU NAS에서 강화학습과 유전 알고리즘 비교</span></a>
+          <ul class="points" lang="en">
+            <li>Graduate course project</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>대학원 수업 프로젝트</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">Publications</span><span lang="ko">논문</span></h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-title">cuPF: GPU-Accelerated AC Power Flow with Multifrontal LU</span>
+          <span class="authors" lang="en"><span class="me">Seungwoo Lee</span>, Jeeheok Bang, Youngmin Yi</span>
+          <span class="authors" lang="ko"><span class="me">이승우</span>, 방지혁, 이영민</span>
+          <span class="venue" lang="en">Manuscript in preparation, 2026</span>
+          <span class="venue" lang="ko">작성 중, 2026</span>
+        </li>
+        <li>
+          <span class="pub-title">EE-NAS: Early-Exit Neural Architecture Search for Tiny Neural Networks</span>
+          <span class="authors" lang="en">Sunghwan Han, <span class="me">Seungwoo Lee</span>, Youngmin Yi</span>
+          <span class="authors" lang="ko">한성환, <span class="me">이승우</span>, 이영민</span>
+          <span class="venue" lang="en">Manuscript in preparation, 2026</span>
+          <span class="venue" lang="ko">작성 중, 2026</span>
+        </li>
+        <li>
+          <span class="pub-title"><span lang="en">cuPF: GPU Acceleration of Power Flow Computation</span><span lang="ko">cuPF: 전력조류계산의 GPU 가속</span></span>
+          <span class="authors" lang="en"><span class="me">Seungwoo Lee</span>, Soyoung Lee, Youngmin Yi</span>
+          <span class="authors" lang="ko"><span class="me">이승우</span>, 이소영, 이영민</span>
+          <span class="venue" lang="en">Korea Computer Congress (KCC 2026), June 2026. Published in Korean as “cuPF: 전력조류계산의 GPU 가속”</span>
+          <span class="venue" lang="ko">한국컴퓨터종합학술대회 (KCC 2026), 2026년 6월</span>
+        </li>
+        <li>
+          <span class="pub-title"><a href="https://www.riss.kr/link?id=A109886587"><span lang="en">Neural Architecture Search for Tiny Neural Networks with Early Exit</span><span lang="ko">조기 종료를 지원하는 초소형 신경망 자동탐색 기술</span></a></span>
+          <span class="authors" lang="en"><span class="me">Seungwoo Lee</span>, Sunghwan Han, Youngmin Yi</span>
+          <span class="authors" lang="ko"><span class="me">이승우</span>, 한성환, 이영민</span>
+          <span class="venue" lang="en">Korea Computer Congress (KCC 2025), pp. 1709–1711, July 2025. <span class="award">Best Paper Award</span></span>
+          <span class="venue" lang="ko">한국컴퓨터종합학술대회 (KCC 2025), pp. 1709–1711, 2025년 7월. <span class="award">최우수논문상</span></span>
+        </li>
+      </ul>
+
+      <h2><span lang="en">Education</span><span lang="ko">학력</span></h2>
+      <ul class="rows">
+        <li lang="en"><span><strong>M.S.</strong>, Computer Science and Engineering, Sogang University</span><span class="when">Mar 2025 – present</span></li>
+        <li lang="ko"><span>서강대학교 컴퓨터공학 <strong>석사과정</strong></span><span class="when">2025.03 – 현재</span></li>
+        <li lang="en"><span><strong>B.S.</strong>, Computer Science and Engineering, Sogang University</span><span class="when">Mar 2019 – Feb 2025</span></li>
+        <li lang="ko"><span>서강대학교 컴퓨터공학 <strong>학사</strong></span><span class="when">2019.03 – 2025.02</span></li>
+      </ul>
+
+      <h2><span lang="en">Awards</span><span lang="ko">수상</span></h2>
+      <ul class="rows">
+        <li lang="en"><span>Best Paper Award, Korea Computer Congress (KCC 2025)</span><span class="when">Jul 2025</span></li>
+        <li lang="ko"><span>최우수논문상, 한국컴퓨터종합학술대회 (KCC 2025), 한국정보과학회</span><span class="when">2025.07</span></li>
+        <li lang="en"><span>Top Excellence Award (Minister of Science and ICT Award), 2nd KISIA Information Security Developer Hackathon</span><span class="when">Aug 2024</span></li>
+        <li lang="ko"><span>최우수상 (과학기술정보통신부 장관상), 제2회 KISIA 정보보호 개발자 해커톤</span><span class="when">2024.08</span></li>
+      </ul>
+    </main>
+  </div>
+
+  <footer class="site-foot"><span lang="en">Last updated November 2026.</span><span lang="ko">2026년 11월 업데이트.</span></footer>
+</div>
+</body>
+</html>
