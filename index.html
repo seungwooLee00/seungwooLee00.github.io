@@ -1,23 +1,239 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Seungwoo Lee </title> <meta name="author" content="Seungwoo Lee"> <meta name="description" content="Seungwoo Lee, M.S. student at Sogang University. Research: software–hardware co-design across GPUs, NPUs, FPGAs, and microcontrollers. "> <meta name="keywords" content="Seungwoo Lee, software-hardware co-design, GPU, CUDA, NPU, FPGA, microcontroller, sparse LU"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
-  :root {
-    --max-content-width: 930px;
-  }
-</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%AE&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://seungwoolee00.github.io/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
-    initTheme();
-  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item active"> <a class="nav-link" href="/">about <span class="sr-only">(current)</span> </a> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title"> <span class="font-weight-bold">Seungwoo</span> Lee </h1> <p class="desc">M.S. student, Sogang University · <b>Software–Hardware Co-design</b></p> </header> <article> <div class="profile float-left"> <div class="more-info"> <p><i class="fa-solid fa-envelope"></i> <a href="mailto:robert032626@gmail.com">robert032626@gmail.com</a></p> <p><i class="fa-brands fa-github"></i> <a href="https://github.com/seungwooLee00" rel="external nofollow noopener" target="_blank">seungwooLee00</a></p> <p><i class="fa-solid fa-file-lines"></i> <a href="/assets/pdf/cv.pdf">CV (PDF)</a></p> <p><i class="fa-solid fa-location-dot"></i> Seoul, South Korea</p> </div> </div> <div class="clearfix"> <style>
-  .post article > .profile { float: none !important; width: 100% !important; margin: 0 0 1.25rem 0 !important; }
-  .post article > .profile .more-info { font-family: inherit; font-size: 0.95rem; text-align: left; }
-  .post article > .profile .more-info p { display: block; margin: 0 0 0.35rem 0; }
-  .post article > .profile .more-info i { width: 1.2em; color: var(--global-text-color-light); }
-  @media (min-width: 768px) {
-    .post article { display: grid; grid-template-columns: 210px minmax(0, 1fr); column-gap: 2.5rem; align-items: start; }
-    .post article > .profile { position: sticky; top: 5rem; margin: 0.25rem 0 0 0 !important; }
-    .post article > .clearfix { grid-column: 2; }
-  }
-</style> <p>I am an M.S. student in Computer Science and Engineering at Sogang University, advised by Prof. Youngmin Yi in the <a href="https://aisys.sogang.ac.kr" rel="external nofollow noopener" target="_blank">High-Performance AI Systems Lab</a>.</p> <p>My research is <strong>software–hardware co-design</strong>. A program runs fast only when its computation and data movement match what the hardware does well. I start from how a workload actually runs on a specific chip — where it waits on memory, leaves compute units idle, or runs out of on-chip storage — and reshape the kernels, the data layout, or the model to fit.</p> <h2 id="gpu-and-npu-kernels">GPU and NPU kernels</h2> <ul> <li> <strong><a href="/projects/sparse-lu/">Accelerating Sparse LU on GPUs</a></strong> (M.S. thesis, ongoing) — packs the many small dense blocks of sparse factorization into GPU warps and picks the kernel to match.</li> <li> <strong><a href="/projects/cupf/">cuPF</a></strong> — batched AC power flow with the whole Newton–Raphson loop on the GPU.</li> <li> <strong><a href="/projects/furiosa/">Gemma-4 kernels on FuriosaAI RNGD</a></strong> — batch-1 decoder kernels restructured around weight streaming on an NPU.</li> </ul> <h2 id="models-for-constrained-devices">Models for constrained devices</h2> <ul> <li> <strong><a href="/projects/eenas/">Early-exit NAS for microcontrollers</a></strong> — searches the network and its early exits together under the memory limits of an STM32H7. KCC 2025 Best Paper Award.</li> <li> <strong><a href="/projects/mpq/">Quantization study</a></strong> (ongoing) — started from running the early-exit model in INT8 on an STM32 without losing its latency advantage; asks which FP32-to-INT8 changes keep accuracy and which save time or memory on the target.</li> </ul> <h2 id="teaching">Teaching</h2> <ul> <li> <strong>Teaching assistant, Basic SoC Design</strong> (fall 2025) — built the course’s <a href="/projects/zynq/">FPGA lab series</a> on the Ultra96-V2, from adders to INT8 dot-product and GEMV accelerators driven by the ARM cores over AXI.</li> </ul> <h2 id="other-projects">Other projects</h2> <ul> <li> <a href="/projects/embedded-aes/">Embedded System Software</a> — Android app, JNI, a custom Linux system call, and a device driver on an i.MX6 board (course project).</li> <li> <a href="/projects/kisia/">Malicious URL and JavaScript detection</a> — team lead and AI models; models quantized to INT8 for a CPU server. Minister of Science and ICT Award.</li> <li> <a href="/projects/webos/">Michelin in TV</a> — webOS TV app; frontend and testing (team project).</li> <li> <a href="/projects/rl-nas/">Reinforcement learning vs. genetic search for MCU NAS</a> — graduate course project.</li> <li> <a href="/projects/compiler/">Compiler construction</a> — course assignments in OCaml.</li> </ul> <h2 id="publications">Publications</h2> <div class="publications"> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#6c757d"> <div>Manuscript</div> </abbr> </div> <div id="lee2026cupf_manuscript" class="col-sm-8"> <div class="title">cuPF: GPU-Accelerated AC Power Flow with Multifrontal LU</div> <div class="author"> <em>Seungwoo Lee</em> and <a href="https://aisys.sogang.ac.kr" rel="external nofollow noopener" target="_blank">Youngmin Yi</a> </div> <div class="periodical"> 2026 </div> <div class="periodical"> Manuscript in preparation </div> <div class="links"> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#6c757d"> <div>Manuscript</div> </abbr> </div> <div id="lee2026eenas_manuscript" class="col-sm-8"> <div class="title">EE-NAS: Early-Exit Neural Architecture Search for Tiny Neural Networks</div> <div class="author"> Sunghwan Han, <em>Seungwoo Lee</em>, and <a href="https://aisys.sogang.ac.kr" rel="external nofollow noopener" target="_blank">Youngmin Yi</a> </div> <div class="periodical"> 2026 </div> <div class="periodical"> Manuscript in preparation </div> <div class="links"> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2e6da4"> <a href="https://www.kiise.or.kr/" rel="external nofollow noopener" target="_blank">KCC 2026</a> </abbr> </div> <div id="lee2026cupf_kcc" class="col-sm-8"> <div class="title">cuPF: GPU Acceleration of Power Flow Computation</div> <div class="author"> <em>Seungwoo Lee</em>, Soyoung Lee, and <a href="https://aisys.sogang.ac.kr" rel="external nofollow noopener" target="_blank">Youngmin Yi</a> </div> <div class="periodical"> <em>In Korea Computer Congress (KCC 2026)</em>. Published in Korean as “cuPF: 전력조류계산의 GPU 가속” , Jun 2026 </div> <div class="periodical"> </div> <div class="links"> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> <abbr class="badge rounded w-100" style="background-color:#2e6da4"> <a href="https://www.kiise.or.kr/" rel="external nofollow noopener" target="_blank">KCC 2025</a> </abbr> </div> <div id="lee2025eenas" class="col-sm-8"> <div class="title">Neural Architecture Search for Tiny Neural Networks with Early Exit</div> <div class="author"> <em>Seungwoo Lee</em>, Sunghwan Han, and <a href="https://aisys.sogang.ac.kr" rel="external nofollow noopener" target="_blank">Youngmin Yi</a> </div> <div class="periodical"> <em>In Korea Computer Congress (KCC 2025)</em>. Published in Korean as “조기 종료를 지원하는 초소형 신경망 자동탐색 기술” , Jul 2025 </div> <div class="periodical"> </div> <div class="links"> <a class="award btn btn-sm z-depth-0" role="button">Best Paper Award</a> <a href="https://www.riss.kr/link?id=A109886587" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a> </div> <div class="award hidden d-print-inline"> <p></p> <p><strong>Best Paper Award</strong>, Korea Computer Congress 2025, Korean Institute of Information Scientists and Engineers</p> </div> </div> </div> </li> </ol> </div> <h2 id="education">Education</h2> <ul> <li> <strong>M.S.</strong>, Computer Science and Engineering, Sogang University — Mar 2025 – present</li> <li> <strong>B.S.</strong>, Computer Science and Engineering, Sogang University — Mar 2019 – Feb 2025</li> </ul> <h2 id="awards">Awards</h2> <ul> <li>Best Paper Award, Korea Computer Congress (KCC 2025) — Jul 2025</li> <li>Top Excellence Award (Minister of Science and ICT Award), 2nd KISIA Information Security Developer Hackathon — Aug 2024</li> </ul> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Seungwoo Lee. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Last updated: November 05, 2026. </div> </footer> <script>
-  window.alFolio = {
-    compatBootstrap: false
-  };
-</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
-    addBackToTop();
-  </script> </body> </html>
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-en="Seungwoo Lee" data-ko="이승우">Seungwoo Lee</title>
+  <meta name="description" content="Seungwoo Lee, M.S. student at Sogang University. Research: software–hardware co-design across GPUs, NPUs, FPGAs, and microcontrollers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="lang.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js" defer></script>
+  <script src="spider.js" defer></script>
+</head>
+<body>
+<div class="page">
+
+  <header class="site-head">
+    <div class="head-row">
+      <h1><span lang="en">Seungwoo Lee</span><span lang="ko">이승우</span></h1>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+        <button type="button" data-set-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+    </div>
+    <p class="role">
+      <span lang="en">M.S. student, Sogang University.</span>
+      <span lang="ko">서강대학교 컴퓨터공학 석사과정.</span>
+    </p>
+  </header>
+
+  <div class="layout">
+
+    <aside class="side">
+      <img class="portrait" src="assets/img/profile.png" width="131" height="169" alt="">
+      <ul class="contact">
+        <li><a href="mailto:robert032626@gmail.com">robert032626@gmail.com</a></li>
+        <li><a href="https://github.com/seungwooLee00">GitHub</a></li>
+        <li><a href="assets/cv.pdf">CV (PDF)</a></li>
+        <li><span lang="en">Seoul, South Korea</span><span lang="ko">서울특별시</span></li>
+      </ul>
+    </aside>
+
+    <main>
+      <p lang="en">I am an M.S. student in Computer Science and Engineering at Sogang University, advised by Prof. Youngmin Yi in the <a href="https://aisys.sogang.ac.kr">High-Performance AI Systems Lab</a>.</p>
+      <p lang="ko">서강대학교 컴퓨터공학 석사과정이며, 이영민 교수님의 <a href="https://aisys.sogang.ac.kr">고성능 인공지능 시스템 연구실</a>에서 연구하고 있습니다.</p>
+
+      <p lang="en"><strong>Software–hardware co-design</strong><br>
+         I optimize software for the characteristics and resource limits of the hardware to make systems faster.<br>
+         I analyze how workloads run on real hardware and find the main performance bottlenecks.<br>
+         Based on that, I apply <strong>kernel optimization, workload mapping, and memory optimization</strong>.</p>
+      <p lang="ko"><strong>Software–Hardware Co-Design</strong><br>
+         하드웨어 특성과 자원 제약에 맞춰 소프트웨어를 최적화해 시스템 성능을 높이는 연구를 합니다.<br>
+         실제 하드웨어에서 워크로드가 어떻게 실행되는지 분석하고 주요 성능 병목을 찾습니다.<br>
+         이를 바탕으로 <strong>Kernel Optimization, Workload Mapping, Memory Optimization</strong>을 적용합니다.</p>
+
+      <h2>GPU kernel optimization</h2>
+      <ul class="projects">
+        <li>
+          <a class="title" href="projects/sparse-lu.html"><span lang="en">Accelerating Sparse LU on GPUs</span><span lang="ko">Sparse LU의 GPU 가속</span></a>
+          <ul class="points" lang="en">
+            <li>Analyze the computational dependencies of sparse LU factorization and the bottlenecks of level-by-level execution</li>
+            <li>Apply persistent-kernel task scheduling</li>
+            <li>Optimize task granularity and GPU resource utilization</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>Sparse LU Factorization의 연산 의존성과 기존 Level-by-Level 실행의 성능 병목 분석</li>
+            <li>Persistent Kernel 기반 Task Scheduling 적용</li>
+            <li>Task Granularity와 GPU Resource Utilization 최적화</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/cupf.html">cuPF</a>
+          <ul class="points" lang="en">
+            <li>Analyze the structure of power-flow Jacobians and the GPU performance bottlenecks</li>
+            <li>Design a GPU multifrontal LU solver for power flow with <strong>workload mapping that accounts for task and data parallelism, warp-level parallelization, and memory-access optimization</strong></li>
+            <li>Accelerate batched AC power flow by running the entire Newton–Raphson process on the GPU</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>Power flow Jacobian의 구조와 GPU 성능 병목 분석</li>
+            <li><strong>Task–Data Parallelism을 고려한 Workload Mapping, Warp-Level Parallelization, Memory Access Optimization</strong>으로 전력조류용 GPU Multifrontal LU Solver 설계</li>
+            <li>Newton–Raphson 전체 과정을 GPU에서 수행해 Batched AC Power Flow 가속</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">On-device AI</span><span lang="ko">On-device AI</span></h2>
+      <ul class="projects">
+        <li>
+          <a class="title" href="projects/eenas.html"><span lang="en">Early-exit NAS for MCUs</span><span lang="ko">MCU용 early-exit NAS</span></a>
+          <ul class="points" lang="en">
+            <li>Studied hardware-aware NAS for on-device AI inference within the limited memory of MCUs</li>
+            <li><strong>Jointly optimized the backbone and the early-exit structure</strong></li>
+            <li>Improved the early classifiers with <strong>a supernet training strategy that reduces training interference between auxiliary classifiers</strong></li>
+            <li>Optimized the trade-off between accuracy and inference latency</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>MCU의 제한된 메모리에서 On-Device AI 추론을 위한 Hardware-Aware NAS 연구</li>
+            <li><strong>Backbone과 Early-Exit 구조 공동 최적화</strong></li>
+            <li><strong>보조 분류기 간 학습 간섭을 줄이는 Supernet Training 전략</strong>으로 초기 분류기 성능 개선</li>
+            <li>정확도와 추론 지연 사이의 Trade-off 최적화</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">FPGA and NPU</span><span lang="ko">FPGA·NPU</span></h2>
+      <ul class="projects">
+        <li>
+          <a class="title" href="projects/zynq.html"><span lang="en">Teaching assistant, Basic SoC Design</span><span lang="ko">기초 SoC 설계 조교</span></a>
+          <ul class="points" lang="en">
+            <li>Designed an FPGA lab curriculum on the Ultra96-V2</li>
+            <li>Built the labs step by step from an adder to <strong>INT8 dot-product and GEMM accelerator design</strong></li>
+            <li>Covered controlling the accelerators from the ARM cores over AXI interfaces</li>
+            <li>Extended the labs to a <strong>tiny-ViT accelerator implementation</strong></li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>Ultra96-V2 FPGA 실습 커리큘럼 설계</li>
+            <li>Adder 구현부터 <strong>INT8 Dot Product·GEMM Accelerator 설계</strong>까지 단계별 구성</li>
+            <li>AXI Interface를 통한 ARM Core의 가속기 제어 실습 구성</li>
+            <li><strong>tiny-ViT Accelerator 구현</strong>까지 확장</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/furiosa.html">NPU Model Optimization Competition</a><span class="status">2026</span>
+          <ul class="points" lang="en">
+            <li>Optimized batch-1 decoding kernels for Gemma-4 on the FuriosaAI RNGD NPU</li>
+            <li><strong>Restructured computation and data movement around weight streaming</strong></li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>FuriosaAI RNGD NPU에서 Gemma-4의 Batch-1 Decoding Kernel 최적화</li>
+            <li><strong>Weight Streaming 중심으로 연산과 Data Movement 재구성</strong></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">Other projects</span><span lang="ko">그 밖의 프로젝트</span></h2>
+      <ul class="projects minor">
+        <li>
+          <a class="title" href="projects/embedded-aes.html"><span lang="en">Embedded System Software</span><span lang="ko">임베디드 시스템 소프트웨어</span></a>
+          <ul class="points" lang="en">
+            <li>Android app, JNI, a custom Linux system call, and a device driver on an i.MX6 board</li>
+            <li>Course project</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>i.MX6 board에서 Android app, JNI, Linux system call 추가, device driver 구현</li>
+            <li>수업 프로젝트</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/kisia.html"><span lang="en">Malicious URL and JavaScript detection</span><span lang="ko">악성 URL·JavaScript 탐지</span></a>
+          <ul class="points" lang="en">
+            <li>Team lead; built the AI models</li>
+            <li>Quantized the models to INT8 for a CPU server</li>
+            <li>Minister of Science and ICT Award</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>팀장, AI model 담당</li>
+            <li>CPU server용 model INT8 양자화</li>
+            <li>과학기술정보통신부 장관상</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/webos.html">Michelin in TV</a>
+          <ul class="points" lang="en">
+            <li>Frontend and testing for a webOS TV app</li>
+            <li>Team project</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>webOS TV app의 Frontend와 test 담당</li>
+            <li>팀 프로젝트</li>
+          </ul>
+        </li>
+        <li>
+          <a class="title" href="projects/rl-nas.html"><span lang="en">Reinforcement learning vs. genetic search for MCU NAS</span><span lang="ko">MCU NAS에서 강화학습과 유전 알고리즘 비교</span></a>
+          <ul class="points" lang="en">
+            <li>Graduate course project</li>
+          </ul>
+          <ul class="points" lang="ko">
+            <li>대학원 수업 프로젝트</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2><span lang="en">Publications</span><span lang="ko">논문</span></h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-title">cuPF: GPU-Accelerated AC Power Flow with Multifrontal LU</span>
+          <span class="authors" lang="en"><span class="me">Seungwoo Lee</span>, Jeeheok Bang, Youngmin Yi</span>
+          <span class="authors" lang="ko"><span class="me">이승우</span>, 방지혁, 이영민</span>
+          <span class="venue" lang="en">Manuscript in preparation, 2026</span>
+          <span class="venue" lang="ko">작성 중, 2026</span>
+        </li>
+        <li>
+          <span class="pub-title">EE-NAS: Early-Exit Neural Architecture Search for Tiny Neural Networks</span>
+          <span class="authors" lang="en">Sunghwan Han, <span class="me">Seungwoo Lee</span>, Youngmin Yi</span>
+          <span class="authors" lang="ko">한성환, <span class="me">이승우</span>, 이영민</span>
+          <span class="venue" lang="en">Manuscript in preparation, 2026</span>
+          <span class="venue" lang="ko">작성 중, 2026</span>
+        </li>
+        <li>
+          <span class="pub-title"><span lang="en">cuPF: GPU Acceleration of Power Flow Computation</span><span lang="ko">cuPF: 전력조류계산의 GPU 가속</span></span>
+          <span class="authors" lang="en"><span class="me">Seungwoo Lee</span>, Soyoung Lee, Youngmin Yi</span>
+          <span class="authors" lang="ko"><span class="me">이승우</span>, 이소영, 이영민</span>
+          <span class="venue" lang="en">Korea Computer Congress (KCC 2026), June 2026. Published in Korean as “cuPF: 전력조류계산의 GPU 가속”</span>
+          <span class="venue" lang="ko">한국컴퓨터종합학술대회 (KCC 2026), 2026년 6월</span>
+        </li>
+        <li>
+          <span class="pub-title"><a href="https://www.riss.kr/link?id=A109886587"><span lang="en">Neural Architecture Search for Tiny Neural Networks with Early Exit</span><span lang="ko">조기 종료를 지원하는 초소형 신경망 자동탐색 기술</span></a></span>
+          <span class="authors" lang="en"><span class="me">Seungwoo Lee</span>, Sunghwan Han, Youngmin Yi</span>
+          <span class="authors" lang="ko"><span class="me">이승우</span>, 한성환, 이영민</span>
+          <span class="venue" lang="en">Korea Computer Congress (KCC 2025), pp. 1709–1711, July 2025. <span class="award">Best Paper Award</span></span>
+          <span class="venue" lang="ko">한국컴퓨터종합학술대회 (KCC 2025), pp. 1709–1711, 2025년 7월. <span class="award">최우수논문상</span></span>
+        </li>
+      </ul>
+
+      <h2><span lang="en">Education</span><span lang="ko">학력</span></h2>
+      <ul class="rows">
+        <li lang="en"><span><strong>M.S.</strong>, Computer Science and Engineering, Sogang University</span><span class="when">Mar 2025 – present</span></li>
+        <li lang="ko"><span>서강대학교 컴퓨터공학 <strong>석사과정</strong></span><span class="when">2025.03 – 현재</span></li>
+        <li lang="en"><span><strong>B.S.</strong>, Computer Science and Engineering, Sogang University</span><span class="when">Mar 2019 – Feb 2025</span></li>
+        <li lang="ko"><span>서강대학교 컴퓨터공학 <strong>학사</strong></span><span class="when">2019.03 – 2025.02</span></li>
+      </ul>
+
+      <h2><span lang="en">Awards</span><span lang="ko">수상</span></h2>
+      <ul class="rows">
+        <li lang="en"><span>Best Paper Award, Korea Computer Congress (KCC 2025)</span><span class="when">Jul 2025</span></li>
+        <li lang="ko"><span>최우수논문상, 한국컴퓨터종합학술대회 (KCC 2025), 한국정보과학회</span><span class="when">2025.07</span></li>
+        <li lang="en"><span>Top Excellence Award (Minister of Science and ICT Award), 2nd KISIA Information Security Developer Hackathon</span><span class="when">Aug 2024</span></li>
+        <li lang="ko"><span>최우수상 (과학기술정보통신부 장관상), 제2회 KISIA 정보보호 개발자 해커톤</span><span class="when">2024.08</span></li>
+      </ul>
+    </main>
+  </div>
+
+  <footer class="site-foot"><span lang="en">Last updated November 2026.</span><span lang="ko">2026년 11월 업데이트.</span></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+/* Seungwoo Lee — homepage
+   Colors follow the portfolio decks: maroon headings, near-black text,
+   grey captions, blue for key numbers. */
+
+:root {
+  --ink: #1a1a1a;
+  --maroon: #8c1919;
+  --muted: #404040;
+  --faint: #6b6b6b;
+  --rule: #d9d9d9;
+  --blue: #0070c0;
+  --bg: #ffffff;
+
+  --font: "IBM Plex Sans", "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --step-0: 1.0625rem;   /* 17px body */
+  --step-1: 1.1875rem;   /* section heads */
+  --step-3: 2.5rem;      /* name */
+  --measure: 48rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  font-feature-settings: "tnum" 0;
+  border-top: 4px solid var(--maroon);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(140, 25, 25, 0.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { color: var(--maroon); text-decoration-color: var(--maroon); }
+a:focus-visible { outline: 2px solid var(--maroon); outline-offset: 2px; border-radius: 2px; }
+
+.page {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 4rem 2rem 5rem;
+}
+
+/* ---------- language ---------- */
+
+html[data-lang="ko"] body [lang="en"],
+html[data-lang="en"] body [lang="ko"],
+html:not([data-lang]) body [lang="ko"] { display: none !important; }
+
+html[data-lang="ko"] body { word-break: keep-all; line-height: 1.7; }
+
+.lang-switch { display: flex; gap: 0.25rem; flex-shrink: 0; }
+.lang-switch button {
+  font: inherit;
+  font-size: 0.9375rem;
+  color: var(--faint);
+  background: none;
+  border: 0;
+  padding: 0.4rem 0.55rem;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.lang-switch button:hover { color: var(--ink); }
+.lang-switch button[aria-pressed="true"] {
+  color: var(--maroon);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
+}
+.lang-switch button:focus-visible { outline: 2px solid var(--maroon); outline-offset: 1px; }
+
+.head-row, .topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.topbar { align-items: center; }
+
+/* ---------- header ---------- */
+
+.site-head h1 {
+  margin: 0;
+  font-size: var(--step-3);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+}
+.site-head .role {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+}
+
+/* ---------- two-column body ---------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: 10rem minmax(0, 1fr);
+  column-gap: 3rem;
+  margin-top: 2.75rem;
+}
+
+.side {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+.portrait {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0.2rem 0 1.25rem;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+}
+.contact {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+.contact li { margin-bottom: 0.45rem; }
+.contact .label {
+  display: block;
+  color: var(--faint);
+  font-size: 0.8125rem;
+}
+
+main > p:first-child,
+main > p:first-child + p[lang="ko"] { margin-top: 0; }
+
+h2 {
+  margin: 2.75rem 0 0.9rem;
+  color: var(--maroon);
+  font-size: var(--step-1);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ---------- project list ---------- */
+
+.projects { margin: 0; padding: 0; list-style: none; }
+.projects > li { margin-bottom: 1.15rem; }
+.projects .title { font-weight: 600; }
+.projects .status { color: var(--faint); font-size: 0.9375rem; margin-left: 0.4rem; white-space: nowrap; }
+.projects p { margin: 0.15rem 0 0; color: var(--muted); }
+
+.points { margin: 0.3rem 0 0; padding-left: 1.15rem; color: var(--muted); list-style: disc; }
+.points li { margin-bottom: 0.15rem; padding-left: 0.15rem; }
+.points li::marker { color: var(--faint); }
+.projects.minor > li { margin-bottom: 0.9rem; }
+.projects.minor .title { font-weight: 500; }
+.projects.minor .points { font-size: 0.9375rem; }
+
+.compact { margin: 0; padding: 0; list-style: none; }
+.compact > li { margin-bottom: 0.6rem; color: var(--muted); }
+.compact a { color: var(--ink); font-weight: 500; }
+
+/* ---------- publications ---------- */
+
+.pubs { margin: 0; padding: 0; list-style: none; }
+.pubs > li { margin-bottom: 1.1rem; }
+.pubs .pub-title { display: block; font-weight: 600; }
+.pubs .authors, .pubs .venue { display: block; color: var(--muted); font-size: 0.9375rem; }
+.pubs .me { color: var(--ink); font-weight: 500; }
+.pubs .award { color: var(--maroon); font-weight: 600; }
+
+/* ---------- dated rows (education, awards) ---------- */
+
+.rows { margin: 0; padding: 0; list-style: none; }
+.rows > li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.rows .when { color: var(--faint); font-size: 0.9375rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+/* ---------- project pages ---------- */
+
+.crumb { font-size: 0.9375rem; color: var(--faint); margin: 0; }
+.crumb a { color: var(--muted); }
+
+.article { max-width: var(--measure); }
+.article h1 {
+  margin: 1.5rem 0 0.4rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+.article .lede { margin: 0 0 2rem; color: var(--muted); }
+.article ul { padding-left: 1.2rem; }
+.article li { margin-bottom: 0.45rem; }
+.article strong { font-weight: 600; }
+.article figure { margin: 1.75rem 0; }
+.article figure img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); }
+.article figcaption { margin-top: 0.5rem; color: var(--muted); font-size: 0.9375rem; font-weight: 600; }
+.num { color: var(--blue); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ---------- footer ---------- */
+
+.site-foot {
+  margin-top: 4.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  color: var(--faint);
+  font-size: 0.8125rem;
+}
+
+/* ---------- corner web and swinging chip spider (spider.js) ---------- */
+
+.page { position: relative; z-index: 1; }
+
+.cobweb {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  z-index: 0;
+  width: min(320px, calc((100vw - 68rem) / 2 + 1rem));   /* the right margin, clear of the text */
+  aspect-ratio: 320 / 280;
+  pointer-events: none;
+}
+.cobweb .web { display: block; width: 100%; height: 100%; overflow: hidden; }
+.cobweb .silk {
+  fill: none;
+  stroke: #c9c9c9;
+  stroke-width: 0.9;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: spin-silk 0.5s ease-out forwards;
+}
+.cobweb .ring { stroke: #d2d2d2; stroke-width: 0.8; animation-duration: 0.35s; }
+.cobweb.still .silk { stroke-dashoffset: 0; animation: none; }
+@keyframes spin-silk { to { stroke-dashoffset: 0; } }
+
+.spider-layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+  z-index: 3;
+  pointer-events: none;
+}
+.spider-layer .rope { fill: none; stroke: #9e9e9e; stroke-width: 1; stroke-linecap: round; }
+.spider-layer .tuft { fill: none; stroke: #b4b4b4; stroke-width: 0.9; stroke-linecap: round; }
+
+.bug { pointer-events: visiblePainted; }
+.bug .hit { fill: transparent; pointer-events: all; }
+.bug .chip { fill: var(--ink); }
+.bug .die { fill: #4a4a4a; }
+.bug .pin1 { fill: #fff; }
+.bug .eye { fill: #fff; }
+.bug .legs path { fill: none; stroke: var(--ink); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.bug.moving .legs { animation: scuttle 0.12s steps(2) infinite; }
+@keyframes scuttle { 50% { transform: scaleX(0.84); } }
+
+@media (max-width: 1279px) {
+  .cobweb, .spider-layer { display: none; }   /* no room beside the text */
+}
+@media print {
+  .cobweb, .spider-layer { display: none; }
+}
+
+/* ---------- narrow screens ---------- */
+
+/* Below 1000px the side column would leave a tall empty strip beside a narrow
+   text column, so the photo and contacts move above the text instead. */
+@media (max-width: 1000px) {
+  .layout { display: block; margin-top: 1.75rem; }
+  .side {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.25rem;
+  }
+  .portrait { width: 88px; margin: 0; }
+  .contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+  }
+  .contact li { margin: 0; }
+}
+
+@media (max-width: 760px) {
+  .page { padding: 2.5rem 1.25rem 3.5rem; }
+  .site-head h1 { font-size: 2rem; }
+  .portrait { width: 76px; }
+  .rows > li { grid-template-columns: 1fr; }
+}
+
+@media print {
+  body { border-top: 0; }
+  .side { position: static; }
+}
