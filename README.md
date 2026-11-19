@@ -13,3 +13,8 @@
 
 미리보기: `index.html`을 브라우저로 열고, 고친 뒤 새로고침.
 링크는 모두 상대 경로라 로컬(file://)과 github.io에서 똑같이 동작한다.
+
+## 배포
+- 저장소 `seungwooLee00/seungwooLee00.github.io`의 `main`에 push하면 GitHub Actions(`.github/workflows/deploy.yml`)가 사이트 파일을 `gh-pages` 브랜치로 올리고, GitHub Pages가 그 브랜치를 서비스한다. 반영까지 1–2분.
+- 이전 al-folio 사이트 원본은 `al-folio-backup` 브랜치에 있다.
+- 프로젝트 상세 페이지는 최종본 전까지 제목만 둔다. 이전 초안은 `../homepage-drafts/`에 있다.
